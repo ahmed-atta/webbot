@@ -1,0 +1,269 @@
+
+html {
+    background-color: #E5E5E5;
+    color: #000000;
+    font: message-box;
+    font-size: 100%;
+    height: 100%;
+}
+body {
+    -moz-box-orient: vertical;
+    background-image: url("chrome://browser/content/abouthome/noise.png"), linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+    display: -moz-box;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+a {
+    color: -moz-nativehyperlinktext;
+    text-decoration: none;
+}
+.spacer {
+    -moz-box-flex: 1;
+}
+#topSection {
+    text-align: center;
+}
+#brandLogo {
+    height: 154px;
+    margin: 22px 0 31px;
+    width: 154px;
+}
+#searchForm, #snippets {
+    width: 470px;
+}
+#searchForm {
+    display: -moz-box;
+}
+#searchLogoContainer {
+    -moz-box-align: center;
+    -moz-padding-end: 8px;
+    display: -moz-box;
+    padding-top: 2px;
+}
+#searchEngineLogo {
+    display: inline-block;
+    height: 28px;
+    width: 70px;
+}
+#searchText {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-box-flex: 1;
+    background: none repeat scroll 0 0 padding-box rgba(255, 255, 255, 0.9);
+    border-color: rgba(23, 51, 78, 0.15) rgba(23, 51, 78, 0.17) rgba(23, 51, 78, 0.2);
+    border-image: none;
+    border-radius: 2.5px 0 0 2.5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(8, 22, 37, 0.02) inset, 0 0 2px rgba(8, 22, 37, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    padding: 6px 8px;
+}
+body[dir="rtl"] #searchText {
+    border-radius: 0 2.5px 2.5px 0;
+}
+#searchText:focus, #searchText[autofocus] {
+    border-color: rgba(51, 166, 255, 0.6) rgba(39, 145, 225, 0.6) rgba(0, 122, 204, 0.6);
+}
+#searchSubmit {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-start: 1px solid transparent;
+    -moz-border-top-colors: none;
+    -moz-margin-start: -1px;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)) repeat scroll 0 0 padding-box transparent;
+    border-color: rgba(23, 51, 78, 0.15) rgba(23, 51, 78, 0.17) rgba(23, 51, 78, 0.2);
+    border-image: none;
+    border-radius: 0 2.5px 2.5px 0;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    padding: 0 9px;
+    transition-duration: 150ms;
+    transition-property: background-color, border-color, box-shadow;
+}
+body[dir="rtl"] #searchSubmit {
+    border-radius: 2.5px 0 0 2.5px;
+}
+#searchText:focus + #searchSubmit, #searchText + #searchSubmit:hover, #searchText[autofocus] + #searchSubmit {
+    border-color: #59B5FC #45A3E7 #3294D5;
+    color: white;
+}
+#searchText:focus + #searchSubmit, #searchText[autofocus] + #searchSubmit {
+    background-image: linear-gradient(#4CB1FF, #1793E5);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(23, 51, 78, 0.03);
+}
+#searchText + #searchSubmit:hover {
+    background-image: linear-gradient(#66BDFF, #0D9EFF);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(23, 51, 78, 0.03), 0 0 4px rgba(0, 57, 102, 0.2);
+}
+#searchText + #searchSubmit:hover:active {
+    box-shadow: 0 1px 1px rgba(3, 14, 27, 0.1) inset, 0 0 1px rgba(3, 14, 27, 0.2) inset;
+    transition-duration: 0ms;
+}
+#defaultSnippet1, #defaultSnippet2 {
+    -moz-padding-start: 79px;
+    background: none no-repeat scroll 30px center transparent;
+    display: block;
+    min-height: 38px;
+    padding: 6px 0;
+}
+body[dir="rtl"] #defaultSnippet1, body[dir="rtl"] #defaultSnippet2 {
+    background-position: right 30px center;
+}
+#defaultSnippet1 {
+    background-image: url("chrome://browser/content/abouthome/snippet1.png");
+}
+#defaultSnippet2 {
+    background-image: url("chrome://browser/content/abouthome/snippet2.png");
+}
+#snippets {
+    color: #3C3C3C;
+    display: inline-block;
+    font-size: 75%;
+    margin: 12px 0;
+    min-height: calc(1.25 * 3em);
+    text-align: start;
+}
+#launcher {
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) inset, 0 -1px 0 rgba(255, 255, 255, 0.25);
+    display: -moz-box;
+    width: 100%;
+}
+#launcher:not([session]), body[narrow] #launcher[session] {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+.launchButton {
+    -moz-box-orient: vertical;
+    background: none repeat scroll 0 0 padding-box transparent;
+    border: 1px solid transparent;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+    color: #525C66;
+    cursor: pointer;
+    display: -moz-box;
+    font-size: 75%;
+    margin: 16px 1px;
+    max-height: 85px;
+    max-width: 176px;
+    min-width: 88px;
+    padding: 14px 6px;
+    transition-duration: 150ms;
+    transition-property: background-color, border-color, box-shadow;
+    vertical-align: top;
+    white-space: normal;
+}
+body[narrow] #launcher[session] > .launchButton {
+    margin: 4px 1px;
+}
+.launchButton:hover {
+    background-color: rgba(3, 14, 27, 0.03);
+    border-color: rgba(23, 51, 78, 0.15) rgba(23, 51, 78, 0.17) rgba(23, 51, 78, 0.2);
+}
+.launchButton:hover:active {
+    background-image: linear-gradient(rgba(3, 14, 27, 0.02), rgba(3, 14, 27, 0.05));
+    border-color: rgba(23, 51, 78, 0.2) rgba(23, 51, 78, 0.23) rgba(23, 51, 78, 0.25);
+    box-shadow: 0 1px 1px rgba(3, 14, 27, 0.05) inset, 0 0 1px rgba(3, 14, 27, 0.1) inset;
+    transition-duration: 0ms;
+}
+.launchButton[hidden], #launcher:not([session]) > #restorePreviousSessionSeparator, #launcher:not([session]) > #restorePreviousSession {
+    display: none;
+}
+#restorePreviousSessionSeparator {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), linear-gradient(rgba(3, 14, 27, 0), rgba(3, 14, 27, 0.2), rgba(3, 14, 27, 0)), linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    background-position: left top, center center, right bottom;
+    background-repeat: no-repeat;
+    background-size: 1px auto;
+    height: 116px;
+    margin: 0 10px;
+    width: 3px;
+}
+body[narrow] #restorePreviousSessionSeparator {
+    background-image: -moz-linear-gradient(0px 50% , rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)), -moz-linear-gradient(0px 50% , rgba(3, 14, 27, 0), rgba(3, 14, 27, 0.2), rgba(3, 14, 27, 0)), -moz-linear-gradient(0px 50% , rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    background-size: auto 1px;
+    height: 3px;
+    margin: 0 auto;
+    width: 512px;
+}
+#restorePreviousSession {
+    font-size: 90%;
+    max-width: none;
+}
+body[narrow] #restorePreviousSession {
+    font-size: 80%;
+}
+.launchButton:before {
+    display: block;
+    height: 32px;
+    line-height: 0;
+    margin: 0 auto 6px;
+    width: 32px;
+}
+#downloads:before {
+    content: url("chrome://browser/content/abouthome/downloads.png");
+}
+#bookmarks:before {
+    content: url("chrome://browser/content/abouthome/bookmarks.png");
+}
+#history:before {
+    content: url("chrome://browser/content/abouthome/history.png");
+}
+#apps:before {
+    content: url("chrome://browser/content/abouthome/apps.png");
+}
+#addons:before {
+    content: url("chrome://browser/content/abouthome/addons.png");
+}
+#sync:before {
+    content: url("chrome://browser/content/abouthome/sync.png");
+}
+#settings:before {
+    content: url("chrome://browser/content/abouthome/settings.png");
+}
+#restorePreviousSession:before {
+    -moz-margin-end: 8px;
+    content: url("chrome://browser/content/abouthome/restore-large.png");
+    display: inline-block;
+    height: 48px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 48px;
+}
+body[dir="rtl"] #restorePreviousSession:before {
+    transform: scaleX(-1);
+}
+body[narrow] #restorePreviousSession:before {
+    content: url("chrome://browser/content/abouthome/restore.png");
+    height: 32px;
+    width: 32px;
+}
+#aboutMozilla {
+    -moz-box-ordinal-group: 0;
+    display: block;
+    opacity: 0.5;
+    position: relative;
+    transition: opacity 150ms ease 0s;
+}
+#aboutMozilla:hover {
+    opacity: 1;
+}
+#aboutMozilla:before {
+    content: url("chrome://browser/content/abouthome/mozilla.png");
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}

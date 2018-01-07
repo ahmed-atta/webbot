@@ -1,0 +1,6 @@
+CONFIG_db*
+.screenrc
+*~
+LOG*
+networks/*.graphml
+networks/*.out.*
